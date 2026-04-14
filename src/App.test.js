@@ -1,8 +1,13 @@
+// Mock the Analytics component
+jest.mock('@vercel/analytics/react', () => ({
+  Analytics: () => null,
+}), { virtual: true });
+
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders puzzle game', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const headingElement = screen.getByText(/Puzzle Game/i);
+  expect(headingElement).toBeInTheDocument();
 });
