@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import { Analytics } from '@vercel/analytics/react';
 
 const initialTiles = [1,2,3,4,5,6,7,8,null];
 
@@ -57,6 +58,7 @@ function App() {
           </div>
         ))}
       </div>
+      <Analytics />
     </div>
   );
 }
